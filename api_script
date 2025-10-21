@@ -1,0 +1,58 @@
+# Used with a Jupyter Notebook. See file name and data selection instructions below. 
+
+import requests
+import pandas as pd
+import time
+from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
+
+def fetch_all_pages(base_url, data_key, per_page=100):
+    """Fetch all pages from API and return combined records."""
+    all_records = []
+    page = 1
+    
+    while True:
+        print(f"Fetching page {page}...")
+        response = requests.get(
+            base_url,
+            params={'per_page': per_page, 'page': page},
+            headers={'Accept': 'application/json'}
+        )
+        
+        if response.status_code != 200:
+            print(f"Request failed at page {page}: {response.status_code}")
+            break
+        
+        records = response.json().get('result', {}).get(data_key, [])
+        
+        if not records:
+            print("No more records found. Done.")
+            break
+        
+        all_records.extend(records)
+        print(f"Page {page} fetched with {len(records)} records.")
+        page += 1
+        time.sleep(0.2)
+    
+    return all_records
+
+# Cleanup data
+def clean_dataframe(df):
+    """Remove illegal Excel characters from string columns."""
+    return df.map(lambda x: ILLEGAL_CHARACTERS_RE.sub("", x) if isinstance(x, str) else x)
+
+# Save and fetch
+def save_doge_data(endpoint, data_key, output_file):
+    """Fetch, clean, and save DOGE data to Excel."""
+    base_url = f'https://api.doge.gov/savings/{endpoint}'
+    records = fetch_all_pages(base_url, data_key)
+    df = pd.json_normalize(records)
+    df = clean_dataframe(df)
+    
+    print(f"Total records collected: {len(df)}")
+    df.to_excel(output_file, index=False)
+    print("All data saved.")
+
+# Use any or all endpoints and use '#' tags ahead of each line if you do not want that data 
+save_doge_data('grants', 'grants', 'GRANTS FILE PATH AND NAME HERE.xlsx') # <-- Replace with your own file name
+save_doge_data('leases', 'leases', 'LEASES FILE PATH AND NAME HERE.xlsx') # <-- Replace with your own file name
+save_doge_data('contracts', 'contracts', 'CONTRACTS FILE PATH AND NAME HERE.xlsx') # <-- Replace with your own file name
