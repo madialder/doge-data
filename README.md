@@ -17,7 +17,23 @@ This code was written and simplified with assistance by ChatGPT and Claude (and 
 ## 📊 Data ##
 Data collected using this script (as well as earlier versions of the code) is also available in this repository. The file naming convention is a six digit YEAR, MONTH, DAY, followed by a single name description of the data downloaded (either 'grants,' 'leases,' or 'contracts').
 
-//An important note: The dataset is not complete. I began collecting May 22, 2025, but I believe I missed two data uploads between the collection July 10, 2025 and the collection Oct. 21, 2025.//
+⚠️ An important note: The dataset is not complete. I began collecting May 22, 2025, but I believe I missed five data uploads between the July 10, 2025 download and the Oct. 21, 2025 download.
+
+The following is a list of the data upload dates by DOGE and whether they're represented.
+| DOGE Upload Date  | Collected? | Date Collected |
+| ------------- | ------------- |  ------------- |
+| May 11, 2025  | ✅ | May 21, 2025
+| May 26, 2025  | ✅ | May 27, 2025
+| June 3, 2025  | ✅ | June 6, 2025
+| June 29, 2025 | ✅ | July 10, 2025
+| July 26, 2025 | ❌ |
+| Aug. 12, 2025 | ❌ | 
+| Aug. 14, 2025 | ❌ | 
+| Aug. 15, 2025 | ❌ | 
+| Sept. 8, 2025 | ❌ | 
+| Oct. 4, 2025 | ✅ | Oct, 21, 2025
+
+
 
 ## 👤 Author ##
 Made by Madison Alder 
