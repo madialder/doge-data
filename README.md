@@ -15,8 +15,11 @@ Those queries are available via the following endpoints:
 This code was written and simplified with assistance by ChatGPT and Claude (and a decent amount of human intervention).
 
 ## 📊 Data ##
-Data collected using this script (as well as an earlier versions of the code) is also available in this repository.
+Data collected using this script (as well as an earlier versions of the code) is also available in this repository. The file naming convention is a six digit YEAR, MONTH, DAY, followed by a single name description of the data downloaded (either 'grants,' 'leases,' or 'contracts').
+
+//An important note: The dataset is not complete. I began collecting May 22, 2025, but I believe I missed two data uploads between the collection July 10, 2025 and the collection Oct. 21, 2025.//
 
 ## 👤 Author ##
-Made by Madison Alder
-Contact: madisonalder@outlook.com
+Made by Madison Alder 
+
+Contact: madisonalder (at) outlook.com
