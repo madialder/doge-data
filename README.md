@@ -1,7 +1,7 @@
 ## DOGE Data Scraper ## 
 This repository includes a script to download data from DOGE's "Wall of Receipts" via its API, as well as data from several of my downloads. 
 
-  * Base URL: https://api.doge.gov/savings/
+  * Base URL: https://api.doge.gov/
 
 ## 🌟 Use ##
 The code in "api_script" was intended for use in a Jupyter Notebook. The current script can be manipulated to pull contracts, grants and leases data from the DOGE website at once or separately. 
