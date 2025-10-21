@@ -22,4 +22,6 @@ Data collected using this script (as well as an earlier versions of the code) is
 ## 👤 Author ##
 Made by Madison Alder 
 
+I'm a reporter with FedScoop teaching myself data analytics.
+
 Contact: madisonalder (at) outlook.com
