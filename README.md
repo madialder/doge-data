@@ -32,6 +32,7 @@ The following is a list of the data upload dates by DOGE and whether they're rep
 | Aug. 15, 2025 | ❌ | 
 | Sept. 8, 2025 | ❌ | 
 | Oct. 4, 2025 | ✅ | Oct. 21, 2025
+| Jan. 1, 2026 | ✅ | Jan. 29, 2026
 
 
 
